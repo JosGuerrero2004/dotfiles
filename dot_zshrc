@@ -23,3 +23,6 @@ alias ls='exa --icons --group-directories-first'
 #Brew auto zsh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+#Default editor and vim alias
+alias vim='nvim'
+export EDITOR='nvim'

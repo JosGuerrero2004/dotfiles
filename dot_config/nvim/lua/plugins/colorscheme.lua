@@ -1,7 +1,7 @@
 return {
 
   {
-    "olimorris/onedarkpro.nvim",
+    "navarasu/onedark.nvim",
     priority = 1000,
   },
 
