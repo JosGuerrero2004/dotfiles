@@ -26,3 +26,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 #Default editor and vim alias
 alias vim='nvim'
 export EDITOR='nvim'
+export TERMINAL=kitty
