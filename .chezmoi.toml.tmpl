@@ -1,0 +1,13 @@
+# If the OS is windows
+{{ if eq .chezmoi.os "windows" }}
+  ignore = [
+    "dot_config/kitty"
+    "dot_config/starship.toml"
+    "dot_zshrc"
+  ]
+  
+  [install]
+  [install.neovim]
+  source = "dot_config/nvim"
+  target = "$env:LOCALAPPDATA\nvim"
+{{ end }}
