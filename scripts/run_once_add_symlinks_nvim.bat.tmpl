@@ -5,23 +5,12 @@ REM Definir las rutas de origen y destino
 set "source=%LOCALAPPDATA%\nvim"
 set "destination=%USERPROFILE%\.config\nvim"
 
-REM Verificar si la carpeta de destino existe
-if not exist "%destination%" (
-    echo Destination folder does not exist: %destination%
-    exit /b 1
-)
-
-REM Crear el symlink solo si el source no existe o no es un symlink
-if not exist "%source%" (
-    mklink /D "%source%" "%destination%"
-    if %errorlevel% equ 0 (
-        echo Symlink created from %source% to %destination%
-    ) else (
-        echo Failed to create symlink
-        exit /b 1
-    )
+REM Crear el enlace simbólico
+mklink /D "%source%" "%destination%"
+if %errorlevel% equ 0 (
+    echo Enlace simbólico creado exitosamente.
 ) else (
-    echo Source folder already exists: %source%
+    echo Error al crear el enlace simbólico.
 )
 
 exit /b 0
