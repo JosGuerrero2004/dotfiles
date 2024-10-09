@@ -2,3 +2,9 @@
 *.log
 
 ~/.config/nvim/lazy-lock.json
+
+{{ if eq .chezmoi.os "windows" }}
+~/.config/kitty,
+~/.config/starship.toml,
+~/.zshrc,
+{{ end }}
